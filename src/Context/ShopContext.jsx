@@ -49,7 +49,8 @@ const ShopContextProvider = (props)=>{
             
         }
     }
-     
+    console.log("TOTALPRICE===",getTotalCartAmount());
+    console.log("CARTITEMS==",cartItems) 
  
     
     
