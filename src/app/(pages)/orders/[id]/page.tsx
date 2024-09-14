@@ -1,3 +1,4 @@
+
 import React, { Fragment } from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
@@ -47,13 +48,10 @@ export default async function Order({ params: { id } }) {
 
   return (
     <Gutter className={classes.orders}>
-      <h1>
-        {`Order`}
-        <span className={classes.id}>{`${order.id}`}</span>
-      </h1>
+      <h3 style={{paddingBottom:"10px"}}>Order Details</h3>
       <div className={classes.itemMeta}>
-        <p>{`ID: ${order.id}`}</p>
-        <p>{`Payment Intent: ${order.stripePaymentIntentID}`}</p>
+      <p>Order ID: <a style={{color:"green"}}>{order.id}</a></p>
+      <p>Payment Intent: <a style={{color:"green"}}>{order.stripePaymentIntentID}</a></p>
         <p>{`Ordered On: ${formatDateTime(order.createdAt)}`}</p>
         <p className={classes.total}>
           {'Total: '}

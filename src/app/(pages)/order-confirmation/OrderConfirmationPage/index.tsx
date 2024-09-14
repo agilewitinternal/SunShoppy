@@ -41,7 +41,7 @@ export const OrderConfirmationPage: React.FC<{}> = () => {
         <Fragment>
           <h1>Thank you for your order!</h1>
           <p>
-            {`Your order has been confirmed. You will receive an email confirmation shortly. Your order ID is ${orderID}.`}
+            Your order has been confirmed. You will receive an email confirmation shortly. Your order ID is <a style={{color:"green"}}>{orderID}</a>.
           </p>
           <div className={classes.actions}>
             <Button href={`/orders/${orderID}`} label="View order" appearance="primary" />
